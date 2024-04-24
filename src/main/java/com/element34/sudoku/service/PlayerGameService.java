@@ -25,7 +25,7 @@ public class PlayerGameService {
         return playerGameRepository.save(playerGame);
     }
 
-    //Sudoku player input solution validation
+    //Sudoku player input solution validation (server side)
     private Boolean isValid(String gameId, String gameDetails) {
         Optional<String> solution = gameRepository.getGameSolution(Long.valueOf(gameId));
 

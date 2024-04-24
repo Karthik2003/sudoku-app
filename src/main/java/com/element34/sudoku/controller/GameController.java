@@ -22,19 +22,18 @@ public class GameController {
         return gameService.getGameById(gameId);
     }
 
-    @GetMapping("/{gameId}/player/{playerId}/play")
+    @GetMapping("/{gameId}/player/{playerId}/solve")
     public Optional<String> getPlayGame(@PathVariable("gameId") String gameId,
                                         @PathVariable("playerId") String playerId) {
 
         return gameService.getPlayGame(gameId);
     }
 
-    @PostMapping("/{gameId}/player/{playerId}/solve")
+    @PostMapping("/{gameId}/player/{playerId}/solution")
     public PlayerGame solvePlayGame(@PathVariable("gameId") String gameId,
                                               @PathVariable("playerId") String playerId,
                                               @RequestBody PlayerGame playerGame) {
 
         return playerGameService.save(gameId, playerId, playerGame);
     }
-
 }

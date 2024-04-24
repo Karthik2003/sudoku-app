@@ -17,5 +17,4 @@ public class PlayerService {
         playerRepository.saveAll(playerList);
     }
 
-
 }

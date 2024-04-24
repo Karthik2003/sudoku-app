@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "d6e5036f-c030-4a95-ae56-03f3e10b38de",
+		"name": "Element34_Sudoku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "398096",
+		"_collection_link": "https://gold-escape-64031.postman.co/workspace/New-Team-Workspace~414d0b70-6ee9-4020-8dc4-0d16acad6cae/collection/398096-d6e5036f-c030-4a95-ae56-03f3e10b38de?action=share&source=collection_link&creator=398096"
+	},
+	"item": [
+		{
+			"name": "Get game details by game Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameDetails\": \"[2,@,0,0],[4,a,0,0],[0,0,s,1],[0,0,d,2]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/game/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get game for solving by player Id and game Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameDetails\": \"[2,@,0,0],[4,a,0,0],[0,0,s,1],[0,0,d,2]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/game/1/player/1001/solve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"1",
+						"player",
+						"1001",
+						"solve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post solution for the game Id by player Id ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameDetails\": \"[1,2,2,4],[4,2,2,1],[2,1,4,2],[2,4,1,2]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/game/1/player/1001/solution",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"1",
+						"player",
+						"1001",
+						"solution"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
